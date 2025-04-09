@@ -1,0 +1,18 @@
+package quickRun;
+
+@Controller
+@RequestMapping("/employee")
+public class C {
+
+    private int empId;
+
+    public C(@PathVariable int id){
+        this.empId = id;
+    }
+
+    @PostMapping("/update")
+    public String update(@PathVariable("id") int id, @RequestParam("dept") String dept) {
+        // operation
+        return "updateSuccess";
+    }
+}
